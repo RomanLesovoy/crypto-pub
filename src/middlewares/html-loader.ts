@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import { getUrl } from '../lib/utils/getUrl';
 
 export function middlewareLoader(request: NextRequest) {
   if (
     request.headers.get('Accept')?.includes('text/html')
   ) {
+    const url = getUrl(request);
     // Создаем измененную HTML страницу с встроенным лоадером
     const enhancedHtml = `
       <!DOCTYPE html>
@@ -56,7 +58,7 @@ export function middlewareLoader(request: NextRequest) {
         
         <script>     
           // Загружаем оригинальный контент через fetch
-          fetch("${request.nextUrl.href}", {
+          fetch("${url.href}", {
             headers: {
               'X-Skip-Loader': '1'
             }
@@ -78,7 +80,7 @@ export function middlewareLoader(request: NextRequest) {
           })
           .catch(error => {
             console.error('Ошибка загрузки контента:', error);
-            window.location.href = "${request.nextUrl.href}";
+            window.location.href = "${url.href}";
           });
         </script>
       </body>
