@@ -4,6 +4,7 @@ import { middleware as middlewareLocale } from './middlewares/locale';
 import { middlewareCookie } from './middlewares/cookie';
 import { middlewareLoader } from './middlewares/html-loader';
 import { supportedLngs } from './lib/i18n/settings';
+import { getUrl } from './lib/utils/getUrl';
 
 export async function middleware(request: NextRequest) {
   // skip middleware for static files, api and other resources
@@ -16,7 +17,7 @@ export async function middleware(request: NextRequest) {
   }
 
   logRequest(request); // log before locale redirect (requests can be duplicated)
-  const url = request.nextUrl.clone();
+  const url = getUrl(request);
 
   if (request.nextUrl.pathname === '/'
     || supportedLngs.some(locale => request.nextUrl.pathname === `/${locale}`)

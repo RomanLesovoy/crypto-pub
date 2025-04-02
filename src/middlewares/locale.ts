@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { match as matchLocale } from '@formatjs/intl-localematcher';
 import { supportedLngs, fallbackLng } from '@/lib/i18n/settings';
 import Negotiator from 'negotiator';
+import { getUrl } from '../lib/utils/getUrl';
 
 // Получение предпочтительной локали пользователя из заголовков
 function getLocale(request: NextRequest): string {
@@ -35,7 +36,7 @@ export async function middleware(request: NextRequest) {
   const locale = getLocale(request);
   
   // Создаем новый URL с локалью
-  const url = request.nextUrl.clone();
+  const url = getUrl(request);
   url.pathname = `/${locale}${pathname === '/' ? '' : pathname}`;
   
   // Сохраняем все параметры запроса
