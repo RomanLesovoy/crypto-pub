@@ -3,6 +3,12 @@ const nextConfig = {
 
   pagesRequiresAuth: [],
 
+  env: {
+    USE_DB: process.env.USE_DB,
+    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+    NEXT_PUBLIC_BASE_PATH: process.env.NEXT_PUBLIC_BASE_PATH,
+  },
+
   // Настройка редиректов
   redirects: async () => {
     return [
