@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Для Firebase Hosting
-  distDir: 'out',
 
   pagesRequiresAuth: [],
 
