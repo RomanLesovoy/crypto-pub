@@ -8,7 +8,7 @@ export default async function CryptoNewsDetailPage({
   searchParams
 }: {
   // @ts-ignore
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
   const { source_key, guid } = await searchParams;
   // Загружаем данные новости по ID
