@@ -9,7 +9,7 @@ const globalForPrisma = global as unknown as {
 };
 
 const getDb = () => {
-  if (process.env.USE_DB) {
+  if (process.env.USE_DB === 'true') {
     return globalForPrisma.prisma ?? new PrismaClient({
       log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
     })
