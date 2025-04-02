@@ -4,9 +4,10 @@ import { fetchCryptoNewsByGuid } from '@/lib/api/crypto';
 import NewsDetail from './NewsDetail';
 
 // Этот компонент работает на сервере и может загружать данные
-export default async function CryptoNewsDetailPage({ 
+export default async function CryptoNewsDetailPage({
   searchParams
-}: { 
+}: {
+  // @ts-ignore
   searchParams: { [key: string]: string | string[] | undefined }
 }) {
   const { source_key, guid } = await searchParams;
