@@ -1,0 +1,38 @@
+/* Стилизация скроллбаров */
+
+/* Для WebKit/Blink браузеров (Chrome, Safari, новые версии Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Черный фон скроллбара */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #10b981; /* Зеленый ползунок (используется зеленый из Tailwind) */
+  border-radius: 8px;
+  border: 2px solid #000000; /* Черная обводка вокруг ползунка */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669; /* Темно-зеленый при наведении */
+}
+
+/* Для Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #10b981 #000000; /* формат: thumb track */
+}
+
+/* Для Edge и IE (устаревший способ) */
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* Гарантируем, что контент с прокруткой корректно отображается */
+* {
+  overflow-anchor: auto;
+}

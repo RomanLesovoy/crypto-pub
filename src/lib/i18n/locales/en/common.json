@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "title": "CryptoPub",
+    "description": "CryptoPub is where your homies gossip on crypto collapse"
+  },
+  "common": {
+    "loading": "Loading...",
+    "not_found": "Not found",
+    "back": "Back",
+    "error": "An error occurred",
+    "prev": "Prev",
+    "next": "Next"
+  },
+  "nav": {
+    "home": "Home",
+    "crypto": "Cryptocurrencies"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Register",
+    "login_title": "Login to your account",
+    "or": "Or",
+    "forgot_password": "Forgot password?",
+    "already_have_account": "Already have an account?",
+    "signup_link": "Create an account",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "confirm_password": "Confirm Password",
+    "invalid_credentials": "Invalid email or password"
+  },
+  "validation": {
+    "email_required": "Email is required",
+    "email_invalid": "Please enter a valid email",
+    "password_required": "Password is required",
+    "password_too_short": "Password must be at least 8 characters",
+    "password_mismatch": "Passwords do not match"
+  },
+  "crypto": {
+    "latest_news": "Latest News",
+    "news_title": "Cryptocurrency News",
+    "news_description": "Latest news and events in the world of cryptocurrencies",
+    "refresh": "Refresh",
+    "no_news": "No news found",
+    "tags": "Tags",
+    "read_original": "Read original"
+  },
+  "footer": {
+    "about": "About",
+    "about_text": "CryptoPub is a platform for tracking cryptocurrency news and blockchain technologies.",
+    "links": "Links",
+    "language": "Language",
+    "rights": "All rights reserved.",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact",
+    "resources": "Resources",
+    "description": "Find loosers in CryptoPub to pump dogecoin together",
+    "faq": "FAQ",
+    "blog": "Blog"
+  }
+}

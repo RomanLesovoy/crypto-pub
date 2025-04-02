@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "CryptoPub",
+    "description": "CryptoPub это там, где твои друзья болтают о крипто проблемах"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "not_found": "Не найдено",
+    "back": "Назад",
+    "error": "Произошла ошибка",
+    "prev": "Предыдущая",
+    "next": "Следующая"
+  },
+  "nav": {
+    "home": "Главная",
+    "crypto": "Криптовалюты"
+  },
+  "auth": {
+    "login": "Войти",
+    "signup": "Регистрация",
+    "logout": "Выйти",
+    "email": "Email",
+    "password": "Пароль",
+    "login_title": "Войдите в свой аккаунт",
+    "or": "Или",
+    "signup_link": "Создать аккаунт",
+    "forgot_password": "Забыли пароль?",
+    "already_have_account": "Уже есть аккаунт?",
+    "confirm_password": "Подтвердить пароль",
+    "invalid_credentials": "Неверный email или пароль"
+  },
+  "validation": {
+    "email_required": "Email обязателен",
+    "email_invalid": "Введите корректный email",
+    "password_required": "Пароль обязателен",
+    "password_too_short": "Пароль должен содержать не менее 8 символов",
+    "password_mismatch": "Пароли не совпадают"
+  },
+  "crypto": {
+    "latest_news": "Последние новости",
+    "news_title": "Новости криптовалют",
+    "news_description": "Последние новости и события в мире криптовалют",
+    "refresh": "Обновить",
+    "no_news": "Новостей нет",
+    "tags": "Теги",
+    "read_original": "Читать оригинал"
+  },
+  "footer": {
+    "about": "О проекте",
+    "about_text": "CryptoPub - это платформа для отслеживания новостей криптовалют и блокчейн-технологий.",
+    "links": "Ссылки",
+    "language": "Язык",
+    "rights": "Все права защищены.",
+    "legal": "Юридическая информация",
+    "terms": "Условия использования",
+    "privacy": "Политика конфиденциальности",
+    "contact": "Контакты",
+    "resources": "Ресурсы",
+    "description": "Соберитесь и пампите dogecoin вместе",
+    "faq": "FAQ",
+    "blog": "Блог"
+
+  }
+}
