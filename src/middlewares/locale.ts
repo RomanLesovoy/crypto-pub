@@ -35,13 +35,14 @@ export async function middleware(request: NextRequest) {
   const locale = getLocale(request);
   
   // Создаем новый URL с локалью
-  const newURL = new URL(`/${locale}${pathname === '/' ? '' : pathname}`, request.url);
+  const url = request.nextUrl.clone();
+  url.pathname = `/${locale}${pathname === '/' ? '' : pathname}`;
   
   // Сохраняем все параметры запроса
   request.nextUrl.searchParams.forEach((value, key) => {
-    newURL.searchParams.set(key, value);
+    url.searchParams.set(key, value);
   });
 
   // Перенаправляем на новый URL с локалью
-  return NextResponse.redirect(newURL.href, { headers: requestHeaders });
+  return NextResponse.redirect(url, { headers: requestHeaders });
 }

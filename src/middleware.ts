@@ -16,12 +16,14 @@ export async function middleware(request: NextRequest) {
   }
 
   logRequest(request); // log before locale redirect (requests can be duplicated)
+  const url = request.nextUrl.clone();
 
   if (request.nextUrl.pathname === '/'
     || supportedLngs.some(locale => request.nextUrl.pathname === `/${locale}`)
     || request.nextUrl.pathname === ''
   ) {
-    return NextResponse.redirect(new URL('/crypto-news', request.url));
+    url.pathname = '/en/crypto-news';
+    return NextResponse.redirect(url);
   }
 
   // locale is missing in url, redirect to the correct locale

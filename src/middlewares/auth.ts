@@ -9,7 +9,9 @@ export async function middlewareRedirectToCryptoNews(request: NextRequest) {
 
   if (isAuthPage) {
     if (isAuth) {
-      return NextResponse.redirect(new URL('/crypto-news', request.url));
+      const url = request.nextUrl.clone();
+      url.pathname = '/en/crypto-news';
+      return NextResponse.redirect(url);
     }
     return null;
   }
@@ -19,7 +21,8 @@ export async function middlewareRedirectToLogin(request: NextRequest) {
   const { isAuth, isApiAuthRoute, isPageRequiresAuth } = await getAuthDataFromRequest(request);
 
   if (!isAuth && !isApiAuthRoute && isPageRequiresAuth) {
-    const url = new URL(`/auth/login`, request.url);
+    const url = request.nextUrl.clone();
+    url.pathname = '/en/auth/login';
     return NextResponse.redirect(url);
   }
   return null;
